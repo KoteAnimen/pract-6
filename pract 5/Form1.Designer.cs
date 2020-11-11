@@ -41,6 +41,12 @@
             this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Compare = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CompareAutos = new System.Windows.Forms.Button();
+            this.secondAuto = new System.Windows.Forms.NumericUpDown();
+            this.firstAuto = new System.Windows.Forms.NumericUpDown();
             this.ClearList = new System.Windows.Forms.Button();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
@@ -51,20 +57,14 @@
             this.countCylinders = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.markAuto = new System.Windows.Forms.TextBox();
-            this.Compare = new System.Windows.Forms.GroupBox();
-            this.firstAuto = new System.Windows.Forms.NumericUpDown();
-            this.secondAuto = new System.Windows.Forms.NumericUpDown();
-            this.CompareAutos = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.Compare.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.secondAuto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstAuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).BeginInit();
-            this.Compare.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firstAuto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.secondAuto)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -179,6 +179,82 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Параметры автомобиля";
             // 
+            // Compare
+            // 
+            this.Compare.Controls.Add(this.label5);
+            this.Compare.Controls.Add(this.label4);
+            this.Compare.Controls.Add(this.CompareAutos);
+            this.Compare.Controls.Add(this.secondAuto);
+            this.Compare.Controls.Add(this.firstAuto);
+            this.Compare.Location = new System.Drawing.Point(9, 175);
+            this.Compare.Name = "Compare";
+            this.Compare.Size = new System.Drawing.Size(200, 129);
+            this.Compare.TabIndex = 10;
+            this.Compare.TabStop = false;
+            this.Compare.Text = "Сравнить два автомобиля";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "№ 2-го автомобиля";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "№ 1-го автомобиля";
+            // 
+            // CompareAutos
+            // 
+            this.CompareAutos.Location = new System.Drawing.Point(7, 100);
+            this.CompareAutos.Name = "CompareAutos";
+            this.CompareAutos.Size = new System.Drawing.Size(185, 23);
+            this.CompareAutos.TabIndex = 2;
+            this.CompareAutos.Text = "Сравнить";
+            this.CompareAutos.UseVisualStyleBackColor = true;
+            this.CompareAutos.Click += new System.EventHandler(this.CompareAutos_Click);
+            // 
+            // secondAuto
+            // 
+            this.secondAuto.Location = new System.Drawing.Point(7, 74);
+            this.secondAuto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.secondAuto.Name = "secondAuto";
+            this.secondAuto.Size = new System.Drawing.Size(185, 20);
+            this.secondAuto.TabIndex = 1;
+            this.secondAuto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // firstAuto
+            // 
+            this.firstAuto.Location = new System.Drawing.Point(7, 32);
+            this.firstAuto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.firstAuto.Name = "firstAuto";
+            this.firstAuto.Size = new System.Drawing.Size(185, 20);
+            this.firstAuto.TabIndex = 0;
+            this.firstAuto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // ClearList
             // 
             this.ClearList.Location = new System.Drawing.Point(35, 372);
@@ -282,62 +358,6 @@
             this.markAuto.Size = new System.Drawing.Size(156, 20);
             this.markAuto.TabIndex = 0;
             // 
-            // Compare
-            // 
-            this.Compare.Controls.Add(this.label5);
-            this.Compare.Controls.Add(this.label4);
-            this.Compare.Controls.Add(this.CompareAutos);
-            this.Compare.Controls.Add(this.secondAuto);
-            this.Compare.Controls.Add(this.firstAuto);
-            this.Compare.Location = new System.Drawing.Point(9, 175);
-            this.Compare.Name = "Compare";
-            this.Compare.Size = new System.Drawing.Size(200, 129);
-            this.Compare.TabIndex = 10;
-            this.Compare.TabStop = false;
-            this.Compare.Text = "Сравнить два автомобиля";
-            // 
-            // firstAuto
-            // 
-            this.firstAuto.Location = new System.Drawing.Point(7, 32);
-            this.firstAuto.Name = "firstAuto";
-            this.firstAuto.Size = new System.Drawing.Size(185, 20);
-            this.firstAuto.TabIndex = 0;
-            // 
-            // secondAuto
-            // 
-            this.secondAuto.Location = new System.Drawing.Point(7, 74);
-            this.secondAuto.Name = "secondAuto";
-            this.secondAuto.Size = new System.Drawing.Size(185, 20);
-            this.secondAuto.TabIndex = 1;
-            // 
-            // CompareAutos
-            // 
-            this.CompareAutos.Location = new System.Drawing.Point(7, 100);
-            this.CompareAutos.Name = "CompareAutos";
-            this.CompareAutos.Size = new System.Drawing.Size(185, 23);
-            this.CompareAutos.TabIndex = 2;
-            this.CompareAutos.Text = "Сравнить";
-            this.CompareAutos.UseVisualStyleBackColor = true;
-            this.CompareAutos.Click += new System.EventHandler(this.CompareAutos_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "№ 1-го автомобиля";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 58);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "№ 2-го автомобиля";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,12 +378,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).EndInit();
             this.Compare.ResumeLayout(false);
             this.Compare.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firstAuto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondAuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstAuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerAuto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countCylinders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
